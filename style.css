@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+    /*Background menu*/
+    --cor-primeira: rgb(80, 79, 79);
+    --cor-segunda: aliceblue;
+    --cor-terceira: black;
+    --cor-quarta: rgb(198, 200, 201);
+}
+
+body {
+    background-color: rgba(128, 128, 128, 0.186);
+}
+
+.menu {
+    display: flex;
+    padding: 10px;
+    background-color: var(--cor-primeira);
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    color: var(--cor-segunda);
+    font-size: 38px;
+    margin-left: 30px;
+
+}
+
+.menu_ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.menu_li {
+    list-style: none;
+    padding: 10px;
+}
+
+.menu_li a {
+    background-color: var(--cor-terceira);
+    color: var(--cor-segunda);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.menu_li a:hover {
+    background-color: var(--cor-quarta);
+    color: var(--cor-terceira);
+}
+
+/* ----------------------------------------- */
+
+/* MAIN */
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.h2_titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 23px;
+    font-size: 2rem;
+    /*16px cada = 32px*/
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    overflow: hidden;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.itens {
+    /* flex-basis: 200px; 
+    flex-grow: 1;  */
+    flex: 1 1 200px;
+}
+
+
+/* header media */
+@media screen and (max-width: 900px) {
+    body {
+        /* background-color: pink; */
+    }
+
+    .menu {
+        display: block;
+    }
+
+    h1 {
+        margin-left: 25px;
+    }
+
+    .menu_ul {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        /* background-color: blue; */
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+    }
+
+    h1 {
+        margin-left: -2px;
+        padding: 10px;
+    }
+
+    .menu_ul {
+        /* background-color: aqua; */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu_li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu_li a {
+        display: block;
+        border-radius: 0;
+        text-align: center;
+    }
+
+}
